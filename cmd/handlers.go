@@ -73,12 +73,8 @@ func (app *application) CreationPage(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Method Not Allowed!", http.StatusMethodNotAllowed)
 		return
 	}
-	storage, err := os.OpenFile("storage.json", os.O_RDONLY|os.O_CREATE, 0666)
-	if err != nil {
-		app.errLg.Panic(err)
-	}
 	testTask := app.GetFromSt()
-
+	tTask := app.GetFromRq(r)
 	testTask = append(testTask, tTask)
 	btestTask, _ := json.Marshal(testTask)
 	os.WriteFile("storage.json", btestTask, 0666)
