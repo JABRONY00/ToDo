@@ -1,1 +1,1 @@
-[]
+[{"ID":1,"Name":"Task1","CreationTime":"2024-02-22T15:07:50.4606234+03:00","Deadline":"0001-01-01T00:00:00Z","Description":"Just do it!"},{"ID":2,"Name":"Task2","CreationTime":"2024-02-22T15:08:41.6327486+03:00","Deadline":"0001-01-01T00:00:00Z","Description":"Do it yourself!"},{"ID":3,"Name":"Task3","CreationTime":"2024-02-22T15:10:19.9924133+03:00","Deadline":"0001-01-01T00:00:00Z","Description":"Do it right now!"}]

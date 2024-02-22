@@ -91,3 +91,4 @@ created by net/http.(*Server).Serve in goroutine 1
 INFO	2024/02/22 14:36:39 Server Up
 INFO	2024/02/22 14:39:30 Server Up
 INFO	2024/02/22 14:41:28 Server Up
+INFO	2024/02/22 15:06:48 Server Up

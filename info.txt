@@ -1,0 +1,5 @@
+JSON fields, you can send in POST request:
+    "Name":"string"
+    "Description":"string"
+    "Deadline":"time.Time" // "2024-07-07T12:00:00Z"
+(If the following fields are missing in request body, they'll be stored as empty fields)
