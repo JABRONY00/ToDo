@@ -4,16 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
-	"time"
 )
-
-type Task struct {
-	ID           int       `json:"ID"`
-	Name         string    `json:"Name"`
-	CreationTime time.Time `json:"CreationTime"`
-	Deadline     time.Time `json:"Deadline"`
-	Description  string    `json:"Description"`
-}
 
 func (app *application) HomePage(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
@@ -22,11 +13,17 @@ func (app *application) HomePage(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Fprintf(w, "Welcome to your list!\n")
 	testTask := app.GetFromSt()
-	if testTask != nil {
-		err := app.JsonRespM(w, testTask)
+	if len(testTask) != 0 {
+		var sTask []ShortTask
+		for _, Task := range testTask {
+			sTask = append(sTask, ShortTask{ID: Task.ID, Name: Task.Name, Deadline: Task.Deadline})
+		}
+		err := app.JsonRespM(w, sTask)
 		if err != nil {
 			app.errLg.Panic(err)
 		}
+	} else {
+		fmt.Fprintf(w, "No active tasks!\n")
 	}
 }
 
@@ -36,16 +33,15 @@ func (app *application) Show(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	testTask := app.GetFromSt()
-
-	if testTask == nil {
+	if len(testTask) == 0 {
 		fmt.Fprintf(w, "No active tasks!")
 		return
 	}
 	b := false
-	for i := 0; i < len(testTask); i++ {
-		if testTask[i].ID == id {
+	for _, Task := range testTask {
+		if Task.ID == id {
 			b = true
-			app.JsonRespS(w, testTask[i])
+			app.JsonRespS(w, Task)
 			break
 		}
 	}
@@ -87,7 +83,7 @@ func (app *application) Change(w http.ResponseWriter, r *http.Request) {
 	}
 	tTask := app.GetFromRq(r)
 	testTask := app.GetFromSt()
-	if testTask == nil {
+	if len(testTask) == 0 {
 		fmt.Fprintf(w, "No active tasks!")
 		return
 	}

@@ -9,6 +9,19 @@ import (
 	"time"
 )
 
+type Task struct {
+	ID           int       `json:"ID"`
+	Name         string    `json:"Name"`
+	CreationTime time.Time `json:"CreationTime"`
+	Deadline     time.Time `json:"Deadline"`
+	Description  string    `json:"Description"`
+}
+type ShortTask struct {
+	ID       int       `json:"ID"`
+	Name     string    `json:"Name"`
+	Deadline time.Time `json:"Deadline"`
+}
+
 func (app *application) GetFromSt() []Task {
 	var testTask []Task
 	storage, err := os.OpenFile("storage.json", os.O_RDONLY, 0666)
@@ -56,7 +69,7 @@ func (app *application) JsonRespS(w http.ResponseWriter, testTask Task) error {
 	return err
 }
 
-func (app *application) JsonRespM(w http.ResponseWriter, testTask []Task) error {
+func (app *application) JsonRespM(w http.ResponseWriter, testTask []ShortTask) error {
 	btestTask, _ := json.Marshal(testTask)
 	w.Header().Set("Content-Type", "application/json")
 	_, err := w.Write(btestTask)

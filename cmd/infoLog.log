@@ -8,3 +8,86 @@ INFO	2024/02/22 12:23:09 Server Up
 INFO	2024/02/22 12:28:08 Server Up
 INFO	2024/02/22 13:02:28 Server Up
 INFO	2024/02/22 13:09:07 Server Up
+INFO	2024/02/22 13:27:11 Server Up
+INFO	2024/02/22 13:32:10 Server Up
+INFO	2024/02/22 13:35:13 Server Up
+INFO	2024/02/22 13:37:22 Server Up
+INFO	2024/02/22 13:47:28 Server Up
+ERROR	2024/02/22 13:47:33 server.go:3212: http: panic serving [::1]:2755: runtime error: index out of range [0] with length 0
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1868 +0xb9
+panic({0xdbea60?, 0xc000192048?})
+	C:/Program Files/Go/src/runtime/panic.go:920 +0x270
+main.(*application).HomePage(0xc0000320f0, {0xe4f220?, 0xc0001a2000}, 0xc0000ac000?)
+	E:/GO/ToDoList/cmd/handlers.go:16 +0x19f
+net/http.HandlerFunc.ServeHTTP(0xb82700?, {0xe4f220?, 0xc0001a2000?}, 0xd3ef1a?)
+	C:/Program Files/Go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0x10340c0?, {0xe4f220, 0xc0001a2000}, 0xc000098100)
+	C:/Program Files/Go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0xc000088120?}, {0xe4f220?, 0xc0001a2000?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0000a8000, {0xe4f758, 0xc00002cb70})
+	C:/Program Files/Go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3086 +0x5cb
+INFO	2024/02/22 13:57:13 Server Up
+ERROR	2024/02/22 13:57:45 server.go:3212: http: panic serving [::1]:2807: runtime error: index out of range [0] with length 0
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1868 +0xb9
+panic({0xcdea60?, 0xc0000170b0?})
+	C:/Program Files/Go/src/runtime/panic.go:920 +0x270
+main.(*application).HomePage(0xc0000320f0, {0xd6f220?, 0xc00012c1c0}, 0x0?)
+	E:/GO/ToDoList/cmd/handlers.go:19 +0xfd
+net/http.HandlerFunc.ServeHTTP(0xaa2700?, {0xd6f220?, 0xc00012c1c0?}, 0xc5ef1a?)
+	C:/Program Files/Go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0xf540c0?, {0xd6f220, 0xc00012c1c0}, 0xc000124300)
+	C:/Program Files/Go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0xc000182030?}, {0xd6f220?, 0xc00012c1c0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0000a8000, {0xd6f758, 0xc00002cb70})
+	C:/Program Files/Go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3086 +0x5cb
+INFO	2024/02/22 14:06:15 Server Up
+ERROR	2024/02/22 14:06:34 server.go:3212: http: panic serving [::1]:2932: runtime error: index out of range [0] with length 0
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1868 +0xb9
+panic({0x4dea60?, 0xc000017158?})
+	C:/Program Files/Go/src/runtime/panic.go:920 +0x270
+main.(*application).HomePage(0xc0000320f0, {0x56f220?, 0xc00012c460}, 0x0?)
+	E:/GO/ToDoList/cmd/handlers.go:24 +0xa7
+net/http.HandlerFunc.ServeHTTP(0x2a2700?, {0x56f220?, 0xc00012c460?}, 0x45ef1a?)
+	C:/Program Files/Go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0x7540c0?, {0x56f220, 0xc00012c460}, 0xc000124600)
+	C:/Program Files/Go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0xc000088120?}, {0x56f220?, 0xc00012c460?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0000a8000, {0x56f758, 0xc00002cb70})
+	C:/Program Files/Go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3086 +0x5cb
+INFO	2024/02/22 14:11:13 Server Up
+ERROR	2024/02/22 14:11:28 server.go:3212: http: panic serving [::1]:2994: runtime error: index out of range [0] with length 0
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1868 +0xb9
+panic({0x65ea60?, 0xc000017080?})
+	C:/Program Files/Go/src/runtime/panic.go:920 +0x270
+main.(*application).HomePage(0xc0000320f0, {0x6ef220?, 0xc00012c0e0}, 0x0?)
+	E:/GO/ToDoList/cmd/handlers.go:24 +0xa7
+net/http.HandlerFunc.ServeHTTP(0x422700?, {0x6ef220?, 0xc00012c0e0?}, 0x5def1a?)
+	C:/Program Files/Go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0x8d40c0?, {0x6ef220, 0xc00012c0e0}, 0xc000124200)
+	C:/Program Files/Go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0xc000088120?}, {0x6ef220?, 0xc00012c0e0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0000a8000, {0x6ef758, 0xc00002cb70})
+	C:/Program Files/Go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3086 +0x5cb
+INFO	2024/02/22 14:36:39 Server Up
+INFO	2024/02/22 14:39:30 Server Up
+INFO	2024/02/22 14:41:28 Server Up
